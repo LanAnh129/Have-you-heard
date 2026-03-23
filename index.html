@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Similiar Exp: Have U hearD?</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="ui-layer">
+    <div id="title-bg">
+      <img src="bg-title.png" alt="title background" />
+    </div>
+
+    <div id="title-screen" class="menu-box">
+      <p>ARROWS: Move | J: Jump | S: Shoot (Needs Orbs)</p>
+      <button onclick="startGame()" id="start-button" disabled>LOADING ASSETS...</button>
+      <button onclick="showLeaderboard()">LEADERBOARD</button>
+    </div>
+
+    <div id="leaderboard-screen" class="menu-box hidden">
+      <h2>HALL OF HEROES</h2>
+      <div id="leaderboard-list" style="text-align: left; margin-bottom: 20px;"></div>
+      <button onclick="showTitle()">BACK</button>
+    </div>
+
+    <div id="dialogue-box">
+      <strong id="dialogue-name">???</strong>
+      <p id="dialogue-text"></p>
+      <small style="color: #666">(Press SPACE to continue)</small>
+    </div>
+
+    <div id="enemy-chat">
+      <strong id="enemy-chat-name">ENEMY</strong>
+      <p id="enemy-chat-text"></p>
+    </div>
+
+    <div id="end-screen" class="menu-box hidden">
+      <h1>JOURNEY COMPLETE</h1>
+      <p id="end-stats"></p>
+      <input type="text" id="player-name" placeholder="YOUR NAME" maxlength="10"><br>
+      <button onclick="saveScore()">SAVE SCORE</button>
+    </div>
+  </div>
+
+  <canvas id="gameCanvas"></canvas>
+
+  <script src="game.js"></script>
+</body>
+</html>
